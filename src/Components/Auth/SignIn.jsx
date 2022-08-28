@@ -34,7 +34,7 @@ export default function SignIn({ isOpen, setIsOpen }) {
   };
 
   const googleSignIn = () =>
-    (window.location.href = "http://localhost:4000/auth/google");
+    (window.location.href = "https://yummely-backend.herokuapp.com/auth/google");
 
   return (
     <>

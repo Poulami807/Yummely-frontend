@@ -7,7 +7,7 @@ export const getImage = (_id) => async (dispatch) => {
   try {
     const Image = await axios({
       method: "GET",
-      url: `http://localhost:4000/image/${_id}`,
+      url: `https://yummely-backend.herokuapp.com/image/${_id}`,
     });
     return dispatch({ type: GET_IMAGE, payload: Image.data });
   } catch (error) {
