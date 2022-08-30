@@ -41,7 +41,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
   };
 
   const googleSignUp = () =>
-    (window.location.href = "https://yummely-backend.herokuapp.com/auth/google");
+    (window.location.href = "https://yummely-server.herokuapp.com/auth/google");
 
   return (
     <>

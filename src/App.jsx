@@ -33,7 +33,7 @@ function App() {
   return (
    <>
    <Routes>
-      <Route path="/" element={<Navigate replace to="/delivery" />} />
+      <Route exact path="/" element={<Navigate replace to="/delivery" />} />
       <Route path='/restaurant/:id' exact element={<RestaurantRedirect/>} />
     </Routes>
     <HomeLayoutHOC path='/delivery' exact  component={HomePage}/>

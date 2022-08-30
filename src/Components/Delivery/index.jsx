@@ -52,6 +52,7 @@ function Delivery() {
     const reduxState = useSelector(
       (globalStore) => globalStore.restaurant.restaurants
     );
+    console.log(reduxState)
 
     useEffect(()=>{
       reduxState.restaurants && setRestaurantList(reduxState.restaurants)

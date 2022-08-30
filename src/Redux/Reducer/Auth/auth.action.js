@@ -10,11 +10,11 @@ export const signIn = (userData) => async (dispatch) => {
   try {
     const User = await axios({
       method: "POST",
-      url: "https://yummely-backend.herokuapp.com/auth/signin",
+      url: "https://yummely-server.herokuapp.com/auth/signin",
       data: { credentials: userData },
     });
 
-    window.location.href = "https://yummely.netlify.app/delivery";
+    window.location.href = "https://yummely-netlify.netlify.app/delivery";
 
     localStorage.setItem(
       "yummelyUser",
@@ -32,11 +32,11 @@ export const signUp = (userData) => async (dispatch) => {
   try {
     const User = await axios({
       method: "POST",
-      url: "https://yummely-backend.herokuapp.com/auth/signup",
+      url: "https://yummely-server.herokuapp.com/auth/signup",
       data: { credentials: userData },
     });
 
-    window.location.href = "hhttps://yummely.netlify.app/delivery";
+    window.location.href = "https://yummely-netlify.netlify.app/delivery";
 
     localStorage.setItem(
       "yummelyUser",
@@ -55,7 +55,7 @@ export const googleAuth = (token) => async (dispatch) => {
     localStorage.setItem("yummelyUser", JSON.stringify({ token }));
 
     dispatch({ type: GOOGLE_AUTH, payload: {} });
-    window.location.href = "https://yummely.netlify.app/delivery";
+    window.location.href = "https://yummely-netlify.netlify.app/delivery";
     
   } catch (error) {
     return dispatch({ type: "ERROR", payload: error });
@@ -66,7 +66,7 @@ export const signOut = () => async (dispatch) => {
   try {
     localStorage.removeItem("yummelyUser");
     clearUser();
-    window.location.href = "https://yummely.netlify.app/delivery";
+    window.location.href = "https://yummely-netlify.netlify.app/delivery";
 
     return dispatch({ type: SIGN_OUT, payload: {} });
   } catch (error) {

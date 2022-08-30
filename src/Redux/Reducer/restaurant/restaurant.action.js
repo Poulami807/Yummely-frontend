@@ -7,20 +7,23 @@ export const getRestaurant = () => async (dispatch) => {
   try {
     const restaurantList = await axios({
       method: "GET",
-      url: "https://yummely-backend.herokuapp.com/restaurant/?city=Kolkata",
+      url: "https://yummely-server.herokuapp.com/restaurant/?city=Kolkata",
     });
-
+    console.log(restaurantList)
     return dispatch({ type: GET_RESTAURANT, payload: restaurantList.data });
   } catch (error) {
-    return console.log(error);
+    return console.log("Error[15]",error);
   }
 };
+
+
+
 
 export const getSpecificRestaurant = (_id) => async (dispatch) => {
   try {
     const restaurant = await axios({
       method: "GET",
-      url: `https://yummely-backend.herokuapp.com/restaurant/${_id}`,
+      url: `https://yummely-server.herokuapp.com/restaurant/${_id}`,
     });
 
     return dispatch({

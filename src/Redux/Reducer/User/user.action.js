@@ -7,7 +7,7 @@ export const getUser = (_id) => async (dispatch) => {
   try {
     const User = await axios({
       method: "GET",
-      url: `https://yummely-backend.herokuapp.com/user/${_id}`,
+      url: `https://yummely-server.herokuapp.com/user/${_id}`,
     });
 
     return dispatch({ type: GET_USER, payload: User.data });

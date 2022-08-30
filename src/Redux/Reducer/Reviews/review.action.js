@@ -7,7 +7,7 @@ export const getReviews = (resId) => async (dispatch) => {
   try {
     const reviewList = await axios({
       method: "GET",
-      url: `https://yummely-backend.herokuapp.com/review/${resId}`,
+      url: `https://yummely-server.herokuapp.com/review/${resId}`,
     });
 
     return dispatch({ type: GET_REVIEWS, payload: reviewList.data });

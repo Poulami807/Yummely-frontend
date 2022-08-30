@@ -19,14 +19,14 @@ function HomePage() {
 
   return (
    <>
-   <h1>hi</h1>
-   {/* <div className='my-5'>
+   {/* <h1>hi</h1> */}
+   <div className='my-5'>
        {type === "delivery" && <Advertisements/>}
        {type === "delivery" && <Delivery/>}
        {type === "dining" && <Dining/>}
        {type === "night" && <NightLife/>}
        {type === "nutri" && <Nutrition/>}
-   </div> */}
+   </div>
    </>
   )
 }
