@@ -36,7 +36,7 @@ function App() {
       <Route exact path="/" element={<Navigate replace to="/delivery" />} />
       <Route path='/restaurant/:id' exact element={<RestaurantRedirect/>} />
     </Routes>
-    <HomeLayoutHOC path='/delivery' exact  component={HomePage}/>
+    <HomeLayoutHOC path='/:type' exact  component={HomePage}/>
     <HomeLayoutHOC path='/google/:token' exact  component={GoogleAuth}/>
     <RestaurantLayoutHOC path='/restaurant/:id/overview' exact  component={Overview}/>
     <RestaurantLayoutHOC path='/restaurant/:id/order-online' exact  component={OrderOnline}/>

@@ -20,7 +20,7 @@ export const postReviews = (reviewData) => async (dispatch) => {
   try {
     await axios({
       method: "POST",
-      url: `https://yummely-backend.herokuapp.com/review/new`,
+      url: `https://yummely-server.herokuapp.com/review/new`,
       data: { reviewData },
     });
 

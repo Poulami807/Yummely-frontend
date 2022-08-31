@@ -20,7 +20,7 @@ export const getMySelf = () => async (dispatch) => {
   try {
     const User = await axios({
       method: "GET",
-      url: `https://yummely-backend.herokuapp.com/user/`,
+      url: `https://yummely-server.herokuapp.com/user/`,
     });
 
     return dispatch({ type: SELF, payload: User.data });
