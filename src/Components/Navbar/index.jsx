@@ -182,7 +182,8 @@ function Navbar() {
             isDropdownOpen={isDropdownOpen}
             setIsDropdownOpen={setIsDropdownOpen}
             signIn={openSignInModal}
-            signUp={openSignUpModal}/>
+            signUp={openSignUpModal}
+            />
           </nav>
         </>
       );
