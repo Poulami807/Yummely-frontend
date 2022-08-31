@@ -37,7 +37,7 @@ function App() {
       <Route path='/restaurant/:id' exact element={<RestaurantRedirect/>} />
     </Routes>
     <HomeLayoutHOC path='/delivery' exact  component={HomePage}/>
-//     <HomeLayoutHOC path='/google/:token' exact  component={GoogleAuth}/>
+    <HomeLayoutHOC path='/google/:token' exact  component={GoogleAuth}/>
     <RestaurantLayoutHOC path='/restaurant/:id/overview' exact  component={Overview}/>
     <RestaurantLayoutHOC path='/restaurant/:id/order-online' exact  component={OrderOnline}/>
     <RestaurantLayoutHOC path='/restaurant/:id/menu' exact  component={Menu}/>
